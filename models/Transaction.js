@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const TransactionSchema = new mongoose.Schema({
-  text: {
+  item: {
     type: String,
     trim: true,
-    required: [true, 'Please add some text']
+    required: [true, 'Please add item description']
   },
   amount: {
     type: Number,
-    required: [true, 'Please add a positive or negative number']
+    required: [true, 'Please add number of items']
   },
   createdAt: {
     type: Date,
