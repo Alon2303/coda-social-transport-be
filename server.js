@@ -1,12 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var cors = require('cors');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const userRoutes = require("./api/user/user.routes");
+const emailRoutes = require("./api/email/email.routes");
 
-var app = express();
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -26,6 +27,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // routes
 app.use("/api/user", userRoutes);
+app.use("/api/email", emailRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
