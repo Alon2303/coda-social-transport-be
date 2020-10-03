@@ -1,11 +1,18 @@
 const createError = require('http-errors');
 const express = require('express');
+const dotenv = require('dotenv');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const connectDB = require('./config/db');
+
+dotenv.config({ path: './config/config.env' });
+
+connectDB();
 
 const userRoutes = require("./api/user/user.routes");
 const emailRoutes = require("./api/email/email.routes");
+const transactions = require('./api/transactions/transactions.routes');
 
 const app = express();
 
@@ -28,6 +35,7 @@ if (process.env.NODE_ENV === 'production') {
 // routes
 app.use("/api/user", userRoutes);
 app.use("/api/email", emailRoutes);
+app.use('/api/transactions', transactions);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
