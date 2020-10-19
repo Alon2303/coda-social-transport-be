@@ -3,10 +3,14 @@ const express = require('express');
 
 // const { getUser } = require('./user.controller');
 
-const { getAllUsersData } = require('./user.controller');
+const { getAllUsersData, getUserByEmail } = require('./user.controller');
 const router = express.Router();
 
 router.get("/", getAllUsersData);
+router.post("/", getUserByEmail);
+
+
+// router.get("/:email", getUserByEmail);
 
 // router.get('/:id', getUser);
 

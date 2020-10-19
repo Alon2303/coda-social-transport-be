@@ -6,8 +6,16 @@ async function getAllUsersData(req, res) {
     res.send(users);
 }
 
+async function getUserByEmail(req, res) {
+    console.log("controller - req.body", req.body)
+    const { email, password } = req.body;
+    const user = await userService.getUser(email, password);
+    res.send(user);
+}
+
 module.exports = {
-    getAllUsersData
+    getAllUsersData,
+    getUserByEmail
 };
 
 // async function getUser(req, res) {
