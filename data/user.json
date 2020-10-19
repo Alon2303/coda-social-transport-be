@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "test",
+        "email": "test@gmail.com",
+        "password": 1234,
+        "phone": 123456789,
+        "companyName": "wix",
+        "address": "Gitit",
+        "selectedFile": null
+    },
+    {
+        "id": 2,
+        "name": "test2",
+        "email": "test2@gmail.com",
+        "password": 1234,
+        "phone": 113456789,
+        "companyName": "google",
+        "address": "tomato st.",
+        "selectedFile": null
+    }
+]
