@@ -11,9 +11,9 @@
     },
     {
         "id": 2,
-        "name": "test2",
-        "email": "test2@gmail.com",
-        "password": 1234,
+        "name": "Jen",
+        "email": "jen@gmail.com",
+        "password": 12345,
         "phone": 113456789,
         "companyName": "google",
         "address": "tomato st.",

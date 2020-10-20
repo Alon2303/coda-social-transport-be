@@ -7,9 +7,9 @@ async function getAllUsersData(req, res) {
 }
 
 async function getUserByEmail(req, res) {
-    console.log("controller - req.body", req.body)
     const { email, password } = req.body;
     const user = await userService.getUser(email, password);
+    console.log("user", user)
     res.send(user);
 }
 
@@ -17,9 +17,3 @@ module.exports = {
     getAllUsersData,
     getUserByEmail
 };
-
-// async function getUser(req, res) {
-// }
-// module.exports = {
-//     getUser
-// };
