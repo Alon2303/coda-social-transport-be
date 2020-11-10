@@ -10,9 +10,22 @@ const userSchema = mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
+    required: [true,"password is requaierd"],
   },
-  name: String,
+  name: {
+    type: String,
+    required: [true,"name is requaierd"],
+  },
+  phone: {
+    type: Number,
+    required: [true,"phone is requaierd"],
+  },
+  companyName: {
+    type: String,
+  },
+  address: {
+    type: String,
+  }
 });
 
 module.exports = mongoose.model("User", userSchema);
