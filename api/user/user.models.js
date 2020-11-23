@@ -15,16 +15,6 @@ const userSchema = mongoose.Schema({
   name: {
     type: String,
     required: [true,"name is requaierd"],
-  },
-  phone: {
-    type: Number,
-    required: [true,"phone is requaierd"],
-  },
-  companyName: {
-    type: String,
-  },
-  address: {
-    type: String,
   }
 });
 
