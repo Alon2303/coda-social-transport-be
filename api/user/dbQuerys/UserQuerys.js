@@ -6,7 +6,6 @@ exports.findUserByEmail = async (userEmail) => {
 };
 
 exports.checkPassword = async (password1, password2) => {
-    console.log("compar password1 == password2", password1 == password2);
     if(password1 == password2){
         return true;
     }else{
@@ -20,9 +19,9 @@ exports.addUser = async (user) => {
         email: user.email,
         password: user.password,
         name: user.name,
-        phone: user.phone,
-        companyName: user.companyName,
-        address: user.address
+        // phone: user.phone,
+        // companyName: user.companyName,
+        // address: user.address
     });
     return await newUser.save();
 };
