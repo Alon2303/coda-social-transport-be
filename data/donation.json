@@ -128,7 +128,7 @@
     "shippingMethod": "הובלה חיצונית",
     "shippingDate": "",
     "pickupAddress": "default address",
-    "status": "ממתין לתשלום",
+    "status": "closed",
     "paymentStatus": "default  status",
     "items": [
       {
@@ -208,7 +208,7 @@
     "shippingMethod": "הובלה עצמאית",
     "shippingDate": "3.1.21",
     "pickupAddress": "default address",
-    "status": "ממתין להובלה",
+    "status": "archived",
     "paymentStatus": "default  status",
     "items": [
       {
