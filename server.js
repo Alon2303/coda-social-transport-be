@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const bodyParser = require("body-parser");
 const cors = require('cors');
 const connectDB = require('./config/db');
 
@@ -13,8 +14,8 @@ connectDB();
 const userRoutes = require("./api/user/user.routes");
 const emailRoutes = require("./api/email/email.routes");
 const transactions = require('./api/transactions/transactions.routes');
-const donationRoutes = require('./api/donation/donation.routes');
 const donordonationRoutes = require('./api/donorSideDonation/donorDonation.routes');
+const donationAdminRoutes = require('./api/adminDonation/donation.routes');
 
 const app = express();
 
@@ -40,8 +41,8 @@ if (process.env.NODE_ENV === 'production') {
 app.use("/api/user", userRoutes);
 app.use("/api/email", emailRoutes);
 app.use('/api/transactions', transactions);
-app.use('/api/donation', donationRoutes);
 app.use('/api/donordonation', donordonationRoutes);
+app.use('/api/donation', donationAdminRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

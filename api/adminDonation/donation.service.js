@@ -2,7 +2,24 @@ const fs = require('fs');
 
 var donations = require('../../data/donation.json');
 
-function query() {
+function query(filterBy) {
+    let filteredDonations = [];
+    switch (filterBy.status) {
+        case 'Open donations':
+            filteredDonations = donations.filter(d => d.status != 'closed' && d.status != 'archived');
+            return filteredDonations;
+        case 'Closed donations':
+            filteredDonations = donations.filter(d => d.status == 'closed');
+            return filteredDonations;
+        case 'Archived donations':
+            filteredDonations = donations.filter(d => d.status == 'archived');
+            return filteredDonations;
+        case 'All donations':
+            return donations;
+        default:
+            break;
+    }
+
     return Promise.resolve(donations);
 }
 

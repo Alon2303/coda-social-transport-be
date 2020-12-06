@@ -13,7 +13,7 @@ async function addDonation(req, res) {
     res.send(donation);
 }
 
-async function query(req, res) {
+async function getDonations(req, res) {
     const donations = await donationService.query(req.query);
     res.send(donations);
 }
@@ -31,7 +31,7 @@ async function updateDonation(req, res) {
 
 module.exports = {
     getDonation,
-    query,
+    getDonations,
     deleteDonation,
     updateDonation,
     addDonation
