@@ -18,10 +18,7 @@ exports.addUser = async (user) => {
         _id: new mongoose.Types.ObjectId(),
         email: user.email,
         password: user.password,
-        name: user.name,
-        // phone: user.phone,
-        // companyName: user.companyName,
-        // address: user.address
+        name: user.name
     });
     return await newUser.save();
 };
