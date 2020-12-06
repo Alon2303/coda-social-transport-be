@@ -14,6 +14,7 @@ const userRoutes = require("./api/user/user.routes");
 const emailRoutes = require("./api/email/email.routes");
 const transactions = require('./api/transactions/transactions.routes');
 const donationRoutes = require('./api/donation/donation.routes');
+const donordonationRoutes = require('./api/donorSideDonation/donorDonation.routes');
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/email", emailRoutes);
 app.use('/api/transactions', transactions);
 app.use('/api/donation', donationRoutes);
+app.use('/api/donordonation', donordonationRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
