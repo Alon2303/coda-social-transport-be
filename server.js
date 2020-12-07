@@ -14,6 +14,7 @@ connectDB();
 const userRoutes = require("./api/user/user.routes");
 const emailRoutes = require("./api/email/email.routes");
 const transactions = require('./api/transactions/transactions.routes');
+const donordonationRoutes = require('./api/donorSideDonation/donorDonation.routes');
 const donationAdminRoutes = require('./api/adminDonation/donation.routes');
 
 const app = express();
@@ -40,6 +41,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use("/api/user", userRoutes);
 app.use("/api/email", emailRoutes);
 app.use('/api/transactions', transactions);
+app.use('/api/donordonation', donordonationRoutes);
 app.use('/api/donation', donationAdminRoutes);
 
 // catch 404 and forward to error handler

@@ -1,17 +1,19 @@
 const mongoose = require("mongoose");
 
 const donorSchema = mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     date: {
         type: Date,
         default: Date.now 
     },
     donorName: {
         type: String,
+        unique: true,
         required: [true, "Donor name is required"]
     },
-    logo: {
-        type: Image
+    logo: {  
+        data: Buffer,  
+        contentType: String 
     },
     shippingMethod: {
         type: String,
@@ -22,15 +24,13 @@ const donorSchema = mongoose.Schema({
         required: [true, "Shipping Date Start is required"]
     },
     shippingDateEnd: {
-        type: Date,
-        required: [true, "Shipping Date Start is required"]
+        type: Date
     },
     alternativeShippingDate: {
         type: Date,
     },
     pickUpAddress: {
-        type: String,
-        required: [true, "Pick up adddress is required"]
+        type: String
     },
     comments: {
         type: String,
@@ -54,25 +54,22 @@ const donorSchema = mongoose.Schema({
     },
     items: [{
         tags: {
-            type: String,
-            default: 'כללי'
+            type: String
         }, 
         count:{
             type: String,
             required: [true, "Count is required"]
         },
-        images: { 
-            data: Buffer, 
-            contentType: String,
-            required: [true, "Image is required"]
+        images: {  
+            data: Buffer,  
+            contentType: String
         },
         comment: {
             type: String,
             default: ''
         },
         itemAccepted: {
-            type: String, 
-            default: 'no'
+            type: String
         }
     }]
 });
