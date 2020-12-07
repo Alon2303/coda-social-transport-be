@@ -6,13 +6,13 @@ function query(filterBy) {
     let filteredDonations = [];
     switch (filterBy.status) {
         case 'Open donations':
-            filteredDonations = donations.filter(d => d.status != 'closed' && d.status != 'archived');
+            filteredDonations = donations.filter(d => d.status != 'on hold' && d.status != 'canceled');
             return filteredDonations;
         case 'Closed donations':
-            filteredDonations = donations.filter(d => d.status == 'closed');
+            filteredDonations = donations.filter(d => d.status == 'canceled');
             return filteredDonations;
         case 'Archived donations':
-            filteredDonations = donations.filter(d => d.status == 'archived');
+            filteredDonations = donations.filter(d => d.status == 'on hold');
             return filteredDonations;
         case 'All donations':
             return donations;

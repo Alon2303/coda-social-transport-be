@@ -7,12 +7,12 @@
     "shippingMethod": "הובלה עצמאית",
     "shippingDate": "24.12.20",
     "pickupAddress": "default address",
-    "status": "חדש",
+    "status": "ממתין להובלה",
     "paymentStatus": "default  status",
     "items": [
       {
         "tag": "כללי",
-        "count": 140,
+        "count": 19,
         "images": [
           "images/items/desk01.jpg",
           "images/items/desk02.jpg",
@@ -21,7 +21,7 @@
       },
       {
         "tag": "ריהוט",
-        "count": 90,
+        "count": 86,
         "images": [
           "images/items/chair01.jpg",
           "images/items/chair02.jpg",
@@ -30,7 +30,7 @@
       },
       {
         "tag": "פריט 3",
-        "count": 45,
+        "count": 46,
         "images": [
           "images/items/drawers01.jpg",
           "images/items/drawers02.jpg",
@@ -38,7 +38,7 @@
         ]
       }
     ],
-    "updatedAt": 1602426520973
+    "updatedAt": 1607370765120
   },
   {
     "id": 2,
@@ -47,46 +47,6 @@
     "logo": "images/logos/wix.jpg",
     "shippingMethod": "זקוקים להובלה",
     "shippingDate": "",
-    "pickupAddress": "default address",
-    "status": "חדש",
-    "paymentStatus": "default  status",
-    "items": [
-      {
-        "tag": "פריט 1",
-        "count": 140,
-        "images": [
-          "images/items/desk01.jpg",
-          "images/items/desk02.jpg",
-          "images/items/desk03.jpg"
-        ]
-      },
-      {
-        "tag": "פריט 2",
-        "count": 90,
-        "images": [
-          "images/items/chair01.jpg",
-          "images/items/chair02.jpg",
-          "images/items/chair03.jpg"
-        ]
-      },
-      {
-        "tag": "פריט 3",
-        "count": 45,
-        "images": [
-          "images/items/drawers01.jpg",
-          "images/items/drawers02.jpg",
-          "images/items/drawers03.jpg"
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "date": "20/11/2020",
-    "donorName": "עמינח",
-    "logo": "images/logos/aminach.jpg",
-    "shippingMethod": "הובלה עצמאית",
-    "shippingDate": "4.1.21",
     "pickupAddress": "default address",
     "status": "ממתין להובלה",
     "paymentStatus": "default  status",
@@ -118,7 +78,49 @@
           "images/items/drawers03.jpg"
         ]
       }
-    ]
+    ],
+    "updatedAt": 1607369824510
+  },
+  {
+    "id": 3,
+    "date": "20/11/2020",
+    "donorName": "עמינח",
+    "logo": "images/logos/aminach.jpg",
+    "shippingMethod": "הובלה עצמאית",
+    "shippingDate": "4.1.21",
+    "pickupAddress": "default address",
+    "status": "canceled",
+    "paymentStatus": "default  status",
+    "items": [
+      {
+        "tag": "מזון",
+        "count": 140,
+        "images": [
+          "images/items/desk01.jpg",
+          "images/items/desk02.jpg",
+          "images/items/desk03.jpg"
+        ]
+      },
+      {
+        "tag": "פריט 2",
+        "count": 90,
+        "images": [
+          "images/items/chair01.jpg",
+          "images/items/chair02.jpg",
+          "images/items/chair03.jpg"
+        ]
+      },
+      {
+        "tag": "פריט 3",
+        "count": 45,
+        "images": [
+          "images/items/drawers01.jpg",
+          "images/items/drawers02.jpg",
+          "images/items/drawers03.jpg"
+        ]
+      }
+    ],
+    "updatedAt": 1607370511760
   },
   {
     "id": 4,
@@ -128,7 +130,7 @@
     "shippingMethod": "הובלה חיצונית",
     "shippingDate": "",
     "pickupAddress": "default address",
-    "status": "closed",
+    "status": "on hold",
     "paymentStatus": "default  status",
     "items": [
       {
@@ -158,7 +160,8 @@
           "images/items/drawers03.jpg"
         ]
       }
-    ]
+    ],
+    "updatedAt": 1607281828316
   },
   {
     "id": 5,
@@ -167,6 +170,47 @@
     "logo": "images/logos/ace.jpg",
     "shippingMethod": "הובלה חיצונית",
     "shippingDate": "",
+    "pickupAddress": "default address",
+    "status": "on hold",
+    "paymentStatus": "default  status",
+    "items": [
+      {
+        "tag": "פריט 1",
+        "count": 140,
+        "images": [
+          "images/items/desk01.jpg",
+          "images/items/desk02.jpg",
+          "images/items/desk03.jpg"
+        ]
+      },
+      {
+        "tag": "פריט 2",
+        "count": 90,
+        "images": [
+          "images/items/chair01.jpg",
+          "images/items/chair02.jpg",
+          "images/items/chair03.jpg"
+        ]
+      },
+      {
+        "tag": "פריט 3",
+        "count": 45,
+        "images": [
+          "images/items/drawers01.jpg",
+          "images/items/drawers02.jpg",
+          "images/items/drawers03.jpg"
+        ]
+      }
+    ],
+    "updatedAt": 1607283900677
+  },
+  {
+    "id": 6,
+    "date": "22/11/2020",
+    "donorName": "קסטרו",
+    "logo": "images/logos/castro.jpg",
+    "shippingMethod": "הובלה עצמאית",
+    "shippingDate": "3.1.21",
     "pickupAddress": "default address",
     "status": "ממתין לתשלום",
     "paymentStatus": "default  status",
@@ -198,46 +242,7 @@
           "images/items/drawers03.jpg"
         ]
       }
-    ]
-  },
-  {
-    "id": 6,
-    "date": "22/11/2020",
-    "donorName": "קסטרו",
-    "logo": "images/logos/castro.jpg",
-    "shippingMethod": "הובלה עצמאית",
-    "shippingDate": "3.1.21",
-    "pickupAddress": "default address",
-    "status": "archived",
-    "paymentStatus": "default  status",
-    "items": [
-      {
-        "tag": "פריט 1",
-        "count": 140,
-        "images": [
-          "images/items/desk01.jpg",
-          "images/items/desk02.jpg",
-          "images/items/desk03.jpg"
-        ]
-      },
-      {
-        "tag": "פריט 2",
-        "count": 90,
-        "images": [
-          "images/items/chair01.jpg",
-          "images/items/chair02.jpg",
-          "images/items/chair03.jpg"
-        ]
-      },
-      {
-        "tag": "פריט 3",
-        "count": 45,
-        "images": [
-          "images/items/drawers01.jpg",
-          "images/items/drawers02.jpg",
-          "images/items/drawers03.jpg"
-        ]
-      }
-    ]
+    ],
+    "updatedAt": 1607282114701
   }
 ]
