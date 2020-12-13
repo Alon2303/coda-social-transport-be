@@ -1,8 +1,12 @@
 const express = require("express");
+const mongoose = require('mongoose');
+const Donor = require('../donorSideDonation/donorDonation.models');
+const db = require('./dbQuerys/adminDonationQuerys');
+
 
 const {
     getDonation,
-    addDonation,
+    // addDonation,
     getDonations,
     deleteDonation,
     updateDonation
@@ -12,7 +16,7 @@ const router = express.Router();
 
 router.get("/", getDonations);
 router.get("/:id", getDonation);
-router.post("/", addDonation);
+// router.post("/", addDonation);
 router.put("/:id", updateDonation);
 router.delete("/:id", deleteDonation);
 

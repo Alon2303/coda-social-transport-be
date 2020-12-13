@@ -4,16 +4,16 @@ const donorSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     date: {
         type: Date,
-        default: Date.now 
+        default: Date.now
     },
     donorName: {
         type: String,
         unique: true,
         required: [true, "Donor name is required"]
     },
-    logo: {  
-        data: Buffer,  
-        contentType: String 
+    logo: {
+        data: Buffer,
+        contentType: String
     },
     shippingMethod: {
         type: String,
@@ -38,7 +38,7 @@ const donorSchema = mongoose.Schema({
     status: {
         type: String
     },
-    awaitingPaymeny: {
+    awaitingPayment: {
         type: String
     },
     paymentStatus: {
@@ -55,13 +55,13 @@ const donorSchema = mongoose.Schema({
     items: [{
         tags: {
             type: String
-        }, 
-        count:{
+        },
+        count: {
             type: String,
             required: [true, "Count is required"]
         },
-        images: {  
-            data: Buffer,  
+        images: {
+            data: Buffer,
             contentType: String
         },
         comment: {
@@ -69,7 +69,8 @@ const donorSchema = mongoose.Schema({
             default: ''
         },
         itemAccepted: {
-            type: String
+            type: String,
+            default: ''
         }
     }]
 });

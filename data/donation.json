@@ -7,7 +7,7 @@
     "shippingMethod": "הובלה עצמאית",
     "shippingDate": "24.12.20",
     "pickupAddress": "default address",
-    "status": "ממתין להובלה",
+    "status": "on hold",
     "paymentStatus": "default  status",
     "items": [
       {
@@ -38,7 +38,7 @@
         ]
       }
     ],
-    "updatedAt": 1607370765120
+    "updatedAt": 1607776571807
   },
   {
     "id": 2,
