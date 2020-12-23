@@ -45,11 +45,23 @@ exports.getById = async (id) => {
 }
 
 exports.update = async (donation) => {
-    const updatedDonation = await Donor.findOneAndUpdate(
-        { _id: donation.id },
-        { $set: { donorName: donation.donorName } },
-        { upsert: true } // if property doesnt exist, insert it.
-    );
+    // Es6 assign
+    var donationToUpdate = {};
+    donationToUpdate = Object.assign(donationToUpdate, donation);
+    console.log('donationToUpdate ::::::::: ', donationToUpdate);
+    delete donationToUpdate._id;
+
+    const updatedDonation = await Donor.findByIdAndUpdate(
+        donation._id,
+        donationToUpdate,
+        // { upsert: true } // if property doesnt exist, insert it.
+    ).exec();
+    // .exec(function (err) {
+    //     if (err) return error;
+    //     return updatedDonation;
+
+    // });
+    console.log('updatedDonation ::::::::: ', updatedDonation);
     return updatedDonation;
 }
 

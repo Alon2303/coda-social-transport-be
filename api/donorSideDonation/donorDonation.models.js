@@ -8,7 +8,7 @@ const donorSchema = mongoose.Schema({
     },
     donorName: {
         type: String,
-        unique: true,
+        // unique: true,
         required: [true, "Donor name is required"]
     },
     logo: {
@@ -36,7 +36,8 @@ const donorSchema = mongoose.Schema({
         type: String,
     },
     status: {
-        type: String
+        type: String,
+        default: 'חדש'
     },
     awaitingPayment: {
         type: String

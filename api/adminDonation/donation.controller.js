@@ -18,9 +18,9 @@ async function getDonations(req, res) {
 
 async function updateDonation(req, res) {
     const donation = req.body;
-    // const updatedDonation = await db.update(donation);
-    // console.log('TEST - donationsDB: ', updatedDonation);
-    await donationService.save(donation);
+    const updatedDonation = await db.update(donation);
+    console.log('TEST - donationsDB: ', updatedDonation);
+    // await donationService.save(donation);
     res.send(donation);
 }
 
