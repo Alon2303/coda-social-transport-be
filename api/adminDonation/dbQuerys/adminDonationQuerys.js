@@ -6,7 +6,15 @@ exports.getDonations = async (filterBy) => {
     let filteredDonations = [];
     switch (filterBy.status) {
         case 'Open donations':
-            filteredDonations = await Donor.find({ status: 'חדש' });
+            filteredDonations = await Donor.find({
+                status: {
+                    $in: [
+                        'חדש',
+                        'ממתין להובלה',
+                        'ממתין לתשלום'
+                    ]
+                }
+            });
             // filteredDonations = donations.filter(d => d.status != 'on hold' && d.status != 'canceled');
             return filteredDonations;
         case 'Closed donations':
