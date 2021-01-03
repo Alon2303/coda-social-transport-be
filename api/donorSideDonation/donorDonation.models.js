@@ -72,6 +72,10 @@ const donorSchema = mongoose.Schema({
         itemAccepted: {
             type: String,
             default: ''
+        },
+        rejectionReason: {
+            type: String,
+            default: ''
         }
     }]
 });
