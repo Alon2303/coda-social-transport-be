@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Donor = require("./../donorDonation.models");
 
 exports.addDonorDonation = async (donor) => {
+    console.log("PRINT DONOR: ", donor);
+    console.log("SHIPPING COMMENT: ", donor.shippingComments);
     const newDonorDonation = new Donor({
         _id: new mongoose.Types.ObjectId(),
         date: donor.date,
@@ -12,9 +14,10 @@ exports.addDonorDonation = async (donor) => {
         shippingDateEnd: donor.shippingDateEnd,
         alternativeShippingDate: donor.alternativeShippingDate,
         pickUpAddress: donor.pickUpAddress,
+        shippingComments: donor.shippingComments,
         comments: donor.comments,
         status: donor.status,
-        awaitingPaymeny: donor.awaitingPaymeny,
+        awaitingPayment: donor.awaitingPayment,
         paymentStatus: donor.paymentStatus,
         contact: donor.contact,
         items: donor.items

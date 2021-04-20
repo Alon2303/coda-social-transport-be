@@ -8,7 +8,6 @@ const donorSchema = mongoose.Schema({
     },
     donorName: {
         type: String,
-        // unique: true,
         required: [true, "Donor name is required"]
     },
     logo: {
@@ -31,6 +30,9 @@ const donorSchema = mongoose.Schema({
     },
     pickUpAddress: {
         type: String
+    },
+    shippingComments: {
+        type: String,
     },
     comments: {
         type: String,
