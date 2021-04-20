@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 const Donor = require("./../donorDonation.models");
 
 exports.addDonorDonation = async (donor) => {
-    console.log("PRINT DONOR: ", donor);
-    console.log("SHIPPING COMMENT: ", donor.shippingComments);
     const newDonorDonation = new Donor({
         _id: new mongoose.Types.ObjectId(),
         date: donor.date,
